@@ -1,4 +1,5 @@
 export { type Author, type Change, type GrepHit, type MemoryBackend, MemoryConflictError } from "./backend.ts";
+export { type CachedBackend, type CachedBackendOptions, cachedBackend } from "./cached.ts";
 export { type Entry, INDEX_FILE, type Meta, formatEntry, parseEntry } from "./entries.ts";
 export {
   type MemoryRepo,
@@ -9,4 +10,5 @@ export {
   memoryRepo,
 } from "./repo.ts";
 export { codeStorageBackend, codeStorageRepo, type CodeStorageOptions } from "./backends/code-storage.ts";
+export { type GitHubOptions, githubBackend } from "./backends/github.ts";
 export { initLocalGitRepo, localGitBackend } from "./backends/local-git.ts";
