@@ -127,9 +127,9 @@ test("a signed push webhook drops the cached head; a bad signature is refused", 
 });
 
 test("configuration is validated with a useful message", () => {
-  assert.throws(() => loadConfig({ GITHUB_TOKEN: "t", ENGRAM_REPO: "my-mem", ENGRAM_CLIENTS: "[]" }), /owner\/name/);
-  assert.throws(() => loadConfig({ GITHUB_TOKEN: "t", ENGRAM_REPO: "a/b", ENGRAM_CLIENTS: "{" }), /pnpm keygen/);
-  const config = loadConfig({ GITHUB_TOKEN: "t", ENGRAM_REPO: "nafisazizir/my-mem", ENGRAM_CLIENTS: JSON.stringify(clients), ENGRAM_BRANCH: "" });
-  assert.equal(config.ENGRAM_BRANCH, "main");
+  assert.throws(() => loadConfig({ GITHUB_TOKEN: "t", MEMORY_REPO: "my-mem", ENGRAM_CLIENTS: "[]" }), /owner\/name/);
+  assert.throws(() => loadConfig({ GITHUB_TOKEN: "t", MEMORY_REPO: "a/b", ENGRAM_CLIENTS: "{" }), /pnpm keygen/);
+  const config = loadConfig({ GITHUB_TOKEN: "t", MEMORY_REPO: "nafisazizir/my-mem", ENGRAM_CLIENTS: JSON.stringify(clients) });
+  assert.equal(config.MEMORY_REPO, "nafisazizir/my-mem");
   assert.equal(config.ENGRAM_CLIENTS.length, 3);
 });
