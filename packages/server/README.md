@@ -13,9 +13,9 @@ branch it writes: `main`, `inbox` (reviewed before merging), or nothing.
 
 ## Deploy (Vercel)
 
-Import the repo with **Root Directory** `packages/server`; Vercel detects Hono from `src/index.ts`
-and runs `vercel-build`, which builds `engram-core` first. Set the variables from `.env.example`. A
-missing or malformed one stops the function at startup, and the runtime logs name it.
+Step by step, including how to create every secret and the security model:
+[`docs/deploy.md`](../../docs/deploy.md). In short: import the repo with **Root Directory**
+`packages/server`, set the variables from `.env.example`, deploy.
 
 ## Add a device
 
