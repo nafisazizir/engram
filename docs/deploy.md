@@ -68,8 +68,9 @@ immediately. Without it, they show up within about 10 seconds anyway. Keep the v
 1. <https://vercel.com/new> → import `nafisazizir/engram`.
 2. **Root Directory:** click *Edit* and choose `packages/server`. This matters: the repo is a monorepo,
    and the server lives there.
-3. **Framework Preset:** Vercel should pick **Hono** on its own. Leave the build and install commands as
-   they are. The server's `vercel-build` script builds `engram-core` first.
+3. **Framework Preset and build settings:** leave them as they are, even if the preset shows *Other*.
+   `packages/server/vercel.json` sets the framework to Hono and the build command (which builds
+   `engram-core` first), and it overrides the dashboard.
 4. **Environment Variables** (paste values with no surrounding quotes):
 
    | Name | Value |
