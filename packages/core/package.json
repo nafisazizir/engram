@@ -1,0 +1,26 @@
+{
+  "name": "@nafisazizir/engram-core",
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test \"src/**/*.test.ts\""
+  },
+  "dependencies": {
+    "@pierre/storage": "1.17.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.x",
+    "typescript": "5.9.3"
+  }
+}
